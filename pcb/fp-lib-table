@@ -1,0 +1,12 @@
+(fp_lib_table
+  (lib (name 24pin0.8mm)(type KiCad)(uri ${KIPRJMOD}/footprint/24pin0.8mm.pretty)(options "")(descr ""))
+  (lib (name AABATTERYCLIP)(type KiCad)(uri ${KIPRJMOD}/footprint/AABATTERYCLIP.pretty)(options "")(descr ""))
+  (lib (name IC)(type KiCad)(uri ${KIPRJMOD}/footprint/IC.pretty)(options "")(descr ""))
+  (lib (name CR1220_2895)(type KiCad)(uri ${KIPRJMOD}/footprint/CR1220_2895.pretty)(options "")(descr ""))
+  (lib (name FA238V)(type KiCad)(uri ${KIPRJMOD}/footprint/FA238V.pretty)(options "")(descr ""))
+  (lib (name GroveCon)(type KiCad)(uri ${KIPRJMOD}/footprint/GroveCon.pretty)(options "")(descr ""))
+  (lib (name MCU_RaspberryPi_and_Boards)(type KiCad)(uri ${KIPRJMOD}/footprint/MCU_RaspberryPi_and_Boards.pretty)(options "")(descr ""))
+  (lib (name SMD_PUSHSWITCH)(type KiCad)(uri ${KIPRJMOD}/footprint/SMD_PUSHSWITCH.pretty)(options "")(descr ""))
+  (lib (name TypeC)(type KiCad)(uri ${KIPRJMOD}/footprint/TypeC.pretty)(options "")(descr ""))
+  (lib (name Joystick)(type KiCad)(uri ${KIPRJMOD}/footprint/Joystick.pretty)(options "")(descr ""))
+)

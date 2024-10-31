@@ -1,0 +1,9 @@
+(sym_lib_table
+  (lib (name XC6194BANNER-G)(type Legacy)(uri ${KIPRJMOD}/parts/XC6194BANNER-G.lib)(options "")(descr ""))
+  (lib (name XC9145B33CER-G)(type Legacy)(uri ${KIPRJMOD}/parts/XC9145B33CER-G.lib)(options "")(descr ""))
+  (lib (name RTC)(type Legacy)(uri ${KIPRJMOD}/parts/RTC.lib)(options "")(descr ""))
+  (lib (name MCU_RaspberryPi_and_Boards)(type Legacy)(uri ${KIPRJMOD}/parts/MCU_RaspberryPi_and_Boards.lib)(options "")(descr ""))
+  (lib (name typeC)(type Legacy)(uri ${KIPRJMOD}/parts/typeC.lib)(options "")(descr ""))
+  (lib (name joystick_SKRHAAE010)(type Legacy)(uri ${KIPRJMOD}/parts/joystick_SKRHAAE010.lib)(options "")(descr ""))
+  (lib (name LDSW_SiP32431)(type Legacy)(uri ${KIPRJMOD}/parts/LDSW_SiP32431.lib)(options "")(descr ""))
+)

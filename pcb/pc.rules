@@ -1,0 +1,120 @@
+
+(rules PCB pc
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 8688)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.7)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.4)
+    )
+  )
+  (rule
+    (width 200.0)
+    (clear 120.2)
+    (clear 100.0 (type smd_to_turn_gap))
+    (clear 200.2 (type default_"POW_B"))
+    (clear 30.0 (type smd_smd))
+    (clear 200.2 (type smd_"POW_B"))
+    (clear 200.2 (type "kicad_default"_"POW_B"))
+    (clear 200.2 (type POW_"POW_B"))
+    (clear 200.2 (type "POW_B"_"POW_B"))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:400_um-POW" "Via[0-1]_800:400_um" POW
+  )
+  (via 
+    "Via[0-1]_800:400_um-POW_B" "Via[0-1]_800:400_um" "POW_B"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    POW "Via[0-1]_800:400_um-POW"
+  )
+  (via_rule
+    "POW_B" "Via[0-1]_800:400_um-POW_B"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND "Net-(BT2-Pad1)" /RUN "Net-(C2-Pad2)" /MPU3.3 +1V1 /XIN /VGH
+    /VCCIO /VCOMH "Net-(C24-Pad1)" /VGL /VSH /AVDD /CD2N /CD2P
+    /CD1N /CD1P /VMREF /VSL "Net-(C34-Pad1)" /SHDN /PG "/RTC_INT"
+    "Net-(J2-Pad10)" "Net-(J2-Pad4)" /DM /DP "/LCD_MOSI" "/LCD_CLK" "/LCD_CSB" "/LCD_A0"
+    "/LCD_RSTB" "/QSPI_CS" "Net-(R5-Pad2)" "Net-(R6-Pad1)" "Net-(R7-Pad2)" /XOUT "Net-(R9-Pad2)" /SDA
+    /SCL "/SW_UP" "/SW_DOWN" "/SW_LEFT" "/SW_RIGHT" "/QSPI_SD3" "/QSPI_CLK" "/QSPI_SD0"
+    "/QSPI_SD2" "/QSPI_SD1" "Net-(C5-Pad1)" "Net-(J3-Pad14)" "Net-(J3-Pad13)" "Net-(J3-Pad12)" "Net-(J3-Pad11)" "Net-(J3-Pad10)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class POW
+    /BAT "Net-(C4-Pad1)" /BAT3.3 "Net-(C6-Pad1)" "Net-(C8-Pad1)" "Net-(D1-Pad2)" "Net-(F1-Pad2)"
+    (clearance_class POW)
+    (via_rule POW)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "POW_B"
+    (clearance_class "POW_B")
+    (via_rule POW_B)
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
