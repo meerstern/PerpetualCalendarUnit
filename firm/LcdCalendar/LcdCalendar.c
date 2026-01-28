@@ -348,6 +348,7 @@ int main()
 	DisableRtcIntPin();
 	EnableRtcI2CInVbat();
 	EnableRtcIntPin();
+	EnableRtcOneMinInt();
 	
 	InitLcdSt7302();
 	UG_Init(&gui, pset, 250, 122);
@@ -493,7 +494,8 @@ int main()
 			if( gpio_get(PIN_RTCINT) == 0 )
 			{
 				DisableRtcIntPin();
-				EnableRtcIntPin();		
+				EnableRtcIntPin();
+				EnableRtcOneMinInt();				
 				if( gpio_get(PIN_RTCINT) == 0 )
 					watchdog_reboot(0,0,0);//Reboot
 			}

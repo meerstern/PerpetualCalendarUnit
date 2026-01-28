@@ -306,10 +306,12 @@ void EnableRtcIntPin()
 
 void EnableRtcOneMinInt()
 {
-    //uint8_t wdat[2]={0};
-    //wdat[0]=SD30XX_REG_ALMEN;
-    //wdat[1]=0x01;
-    //i2c_write_blocking(I2C_PORT, SD30XX_ADDR, wdat, 2, false);
+    uint8_t wdat[2]={0};
+    wdat[0]=SD30XX_REG_ALMEN;
+    wdat[1]=0x01;
+	writeEnable();
+    i2c_write_blocking(I2C_PORT, SD30XX_ADDR, wdat, 2, false);
+	writeDisable();
 }
 
 void DisableRtcIntPin()
